@@ -1316,3 +1316,104 @@ footer {
     font-size: 0.85rem;
   }
 }
+
+/* ============================================================
+   KODE TAMBAHAN UNTUK TAMPILAN HANDPHONE (RESPONSIF)
+   Tempelkan di paling bawah file style.css
+   ============================================================ */
+
+@media screen and (max-width: 768px) {
+    /* 1. Navigasi & Header */
+    .navbar {
+        flex-direction: column; /* Menu menumpuk ke bawah */
+        padding: 15px;
+        height: auto; /* Agar tidak terpotong */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Supaya menu kalau gak muat pindah ke baris baru */
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .nav-links li {
+        margin: 0 5px;
+    }
+
+    /* 2. Hero Section (Banner Utama) */
+    .hero {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 24px !important; /* Ukuran teks judul dikecilkan untuk HP */
+    }
+
+    .hero p {
+        font-size: 14px !important;
+    }
+
+    /* 3. Container Utama & Section */
+    .container, section {
+        width: 100% !important;
+        padding: 20px !important;
+        margin: 0 !important;
+        box-sizing: border-box; /* Mencegah elemen bocor ke samping */
+    }
+
+    /* 4. Grid Menu & Layanan (Penting!) */
+    /* Mengubah 3-4 kolom di laptop menjadi 1 kolom di HP */
+    .menu-container, 
+    .rekomendasi-grid, 
+    .features-container, 
+    .testi-grid, 
+    .gallery-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    /* 5. Kartu (Menu, Testimoni, Fitur) */
+    .menu-item, 
+    .card, 
+    .testi-item, 
+    .feature-item, 
+    .promo-card {
+        width: 90% !important; /* Kartu jadi lebar di HP */
+        max-width: 350px;
+        margin: 0 auto !important;
+    }
+
+    /* 6. Form Pemesanan & Kontak (Gambar 1 di foto kamu) */
+    .form-container, form {
+        width: 100% !important;
+        padding: 15px !important;
+    }
+
+    input, select, textarea, .btn-submit {
+        width: 100% !important;
+        margin-bottom: 10px;
+        font-size: 16px !important; /* Agar tidak auto-zoom di iPhone */
+    }
+
+    /* 7. Gambar & Video */
+    img, video {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* 8. Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-section {
+        width: 100% !important;
+    }
+}
