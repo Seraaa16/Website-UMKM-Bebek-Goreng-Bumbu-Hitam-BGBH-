@@ -99,7 +99,26 @@
 
             <input type="datetime-local" id="tanggal" required />
 
-            <textarea id="pesanan" placeholder="Pesanan Anda"></textarea>
+            <div class="cart-section">
+              <h4 style="margin: 10px 0; color: #000">Daftar Pesanan</h4>
+
+              <div id="cartList" style="margin-bottom: 10px"></div>
+
+              <div
+                class="cart-total"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  font-weight: 600;
+                  padding: 10px;
+                  background: #fff4f4;
+                  border-radius: 6px;
+                "
+              >
+                <span>Total Estimasi</span>
+                <span id="cartTotal">Rp 0</span>
+              </div>
+            </div>
 
             <textarea
               id="catatan"
